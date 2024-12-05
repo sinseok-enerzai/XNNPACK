@@ -4265,7 +4265,7 @@ config_setting(
 # Enables usage of JIT kernels.
 config_setting(
     name = "xnn_enable_jit_explicit_true",
-    define_values = {"xnn_enable_jit": "true"},
+    define_values = {"xnn_enable_jit": "false"},
 )
 
 # Enables usage of slinky locality optimizations
