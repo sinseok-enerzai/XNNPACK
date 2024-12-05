@@ -3465,7 +3465,7 @@ cc_library(
 cc_library(
     name = "enable_jit",
     defines = select({
-        ":jit_enabled": ["XNN_ENABLE_JIT=1"],
+        ":jit_enabled": ["XNN_ENABLE_JIT=0"],
         "//conditions:default": ["XNN_ENABLE_JIT=0"],
     }),
     visibility = xnnpack_visibility(),
