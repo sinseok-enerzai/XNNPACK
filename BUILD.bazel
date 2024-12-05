@@ -4281,7 +4281,7 @@ selects.config_setting_group(
         "//build_config:emscripten",
     ],
 )
-
+qweq weqnjkrqnwrnqwlrkqwrqwlm
 # Disables usage of JIT kernels.
 config_setting(
     name = "xnn_enable_jit_explicit_false",
