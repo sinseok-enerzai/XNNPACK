@@ -4644,7 +4644,7 @@ selects.config_setting_group(
     name = "jit_enabled_by_default",
     match_any = [
         # Disabled by default, only enabled explicitly
-        ":xnn_enable_jit_explicit_true",
+        ":xnn_enable_jit_explicit_false",
     ],
 )
 

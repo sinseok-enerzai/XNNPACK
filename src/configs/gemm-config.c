@@ -122,6 +122,7 @@ static void init_f16_gemm_config(void) {
             f16_gemm_config.mr = 6;
             f16_gemm_config.nr = 16;
             #if XNN_ENABLE_JIT
+              ㅂㅈㄷㅂㅈㄷㅂㅈㄷㅂㅈㄷ
               f16_gemm_config.generator.gemm[XNN_MR_TO_INDEX(1)] = xnn_init_hmp_gemm_codegen(xnn_generate_f16_gemm_ukernel_1x16__aarch64_neonfp16arith_ld64);
               f16_gemm_config.generator.gemm[XNN_MR_TO_INDEX(6)] = xnn_init_hmp_gemm_codegen(xnn_generate_f16_gemm_ukernel_6x16__aarch64_neonfp16arith_cortex_a55r0);
               f16_gemm_config.generator.igemm[XNN_MR_TO_INDEX(1)] = xnn_init_hmp_igemm_codegen(xnn_generate_f16_igemm_ukernel_1x16__aarch64_neonfp16arith_ld64);
