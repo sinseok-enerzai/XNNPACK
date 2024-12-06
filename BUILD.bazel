@@ -3465,8 +3465,8 @@ cc_library(
 cc_library(
     name = "enable_jit",
     defines = select({
-        ":jit_enabled": ["XNN_ENABLE_JIT=0"],
-        "//conditions:default": ["XNN_ENABLE_JIT=0"],
+        ":jit_enabled": ["XNN_ENABLE_JIT=1"],
+        "//conditions:default": ["XNN_ENABLE_JIT=1"],
     }),
     visibility = xnnpack_visibility(),
 )
@@ -4265,7 +4265,7 @@ config_setting(
 # Enables usage of JIT kernels.
 config_setting(
     name = "xnn_enable_jit_explicit_true",
-    define_values = {"xnn_enable_jit": "false"},
+    define_values = {"xnn_enable_jit": "true"},
 )
 
 # Enables usage of slinky locality optimizations
@@ -4281,11 +4281,10 @@ selects.config_setting_group(
         "//build_config:emscripten",
     ],
 )
-qweq weqnjkrqnwrnqwlrkqwrqwlm
 # Disables usage of JIT kernels.
 config_setting(
     name = "xnn_enable_jit_explicit_false",
-    define_values = {"xnn_enable_jit": "false"},
+    define_values = {"xnn_enable_jit": "true"},
 )
 
 # Enables usage of mr heuristic to select microkernels.
